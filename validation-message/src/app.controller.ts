@@ -16,8 +16,11 @@ export class AppController {
   @Post()
   @UsePipes(
     new ValidationPipe({
-      exceptionFactory: (e) => {
-        return new BadRequestException(e);
+      exceptionFactory: () => {
+        return new BadRequestException({
+          custom: 'message1',
+          hoge: 'message2',
+        });
       },
     }),
   )
