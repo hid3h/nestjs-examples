@@ -1,10 +1,8 @@
-<html>
-  <head>
-    <meta charset='utf-8' />
-    <title>App</title>
-  </head>
-  <body>
-    {{message}}
-    by hbs
-  </body>
-</html>
+{{#> layout}}
+  {{#*inline "content"}}
+    二重括弧{{message}}
+    三重括弧{{{message}}}
+    <textarea>{{message}}</textarea>
+    <textarea>{{{message}}}</textarea>
+  {{/inline}}
+{{/layout}}
