@@ -1,0 +1,20 @@
+{{#> layout}}
+  {{#*inline "content"}}
+    <div>
+      二重括弧{{message}}
+    </div>
+    <div>
+      三重括弧{{{message}}}
+    </div>
+    <div>
+      <textarea>{{message}}</textarea>
+    </div>
+    <div>
+      <textarea>{{{message}}}</textarea>
+    </div>
+    <p>↓pre二重括弧</p>
+    <pre>{{message}}</pre>
+    <p>↓pre三重括弧</p>
+    <pre>{{{message}}}</pre>
+  {{/inline}}
+{{/layout}}
